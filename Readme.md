@@ -24,14 +24,14 @@
 student {
   "id": "Long",
   "name": "String",
-  "document": "String",
+  "identityNumber": "String",
   "studentSince": "LocalDate",
   "birthdate": "LocalDate",
   "cellphone": "Long",
   "email": "String",  
   "postalCode": "String",
   "addressLine": "String",
-  "bill": "String",
+  "bill": "double",
   "lastPayDate": "LocalDate"
 }
 ```
