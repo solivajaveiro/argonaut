@@ -11,7 +11,7 @@ public class StudentDTO implements Serializable {
 
     private LocalDate studentSince;
 
-    private LocalDate birthDate;
+    private LocalDate birthdate;
 
     private Long cellphone;
 
@@ -23,7 +23,7 @@ public class StudentDTO implements Serializable {
 
     private double monthlyBill;
 
-    private LocalDate lastPayDate;
+    private LocalDate lastpaydate;
 
     public String getName() {
         return name;
@@ -49,12 +49,12 @@ public class StudentDTO implements Serializable {
         this.studentSince = studentSince;
     }
 
-    public LocalDate getBirthDate() {
-        return birthDate;
+    public LocalDate getBirthdate() {
+        return birthdate;
     }
 
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
+    public void setBirthdate(LocalDate birthdate) {
+        this.birthdate = birthdate;
     }
 
     public Long getCellphone() {
@@ -97,11 +97,11 @@ public class StudentDTO implements Serializable {
         this.monthlyBill = monthlyBill;
     }
 
-    public LocalDate getLastPayDate() {
-        return lastPayDate;
+    public LocalDate getLastpaydate() {
+        return lastpaydate;
     }
 
-    public void setLastPayDate(LocalDate lastPayDate) {
-        this.lastPayDate = lastPayDate;
+    public void setLastpaydate(LocalDate lastpaydate) {
+        this.lastpaydate = lastpaydate;
     }
 }

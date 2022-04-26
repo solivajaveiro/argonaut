@@ -17,6 +17,7 @@
 - GET /argonauts/{id} -> get
 - PUT /argonauts/{id} -> update
 - DELETE /argonauts/{id} -> delete
+- GET /argonauts/{active} -> getByStatus
 
 ## Model
 
@@ -33,5 +34,6 @@ student {
   "addressLine": "String",
   "bill": "double",
   "lastPayDate": "LocalDate"
+  "active": "boolean"
 }
 ```

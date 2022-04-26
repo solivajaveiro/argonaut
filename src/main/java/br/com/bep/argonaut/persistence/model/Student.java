@@ -23,7 +23,7 @@ public class Student implements Serializable {
     private LocalDate studentSince;
 
     @Column(name = "birthdate", nullable = false)
-    private LocalDate birthDate;
+    private LocalDate birthdate;
 
     @Column(name = "cellphone", nullable = false)
     private Long cellphone;
@@ -41,7 +41,7 @@ public class Student implements Serializable {
     private double monthlyBill;
 
     @Column(name = "last_pay_date")
-    private LocalDate lastPayDate;
+    private LocalDate lastpaydate;
 
     @Column(name = "active")
     private boolean active;
@@ -79,11 +79,11 @@ public class Student implements Serializable {
     }
 
     public LocalDate getBirthDate() {
-        return birthDate;
+        return birthdate;
     }
 
     public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
+        this.birthdate = birthDate;
     }
 
     public Long getCellphone() {
@@ -126,13 +126,22 @@ public class Student implements Serializable {
         this.monthlyBill = monthlyBill;
     }
 
-    public LocalDate getLastPayDate() {
-        return lastPayDate;
+    public LocalDate getBirthdate() {
+        return birthdate;
     }
 
-    public void setLastPayDate(LocalDate lastPayDate) {
-        this.lastPayDate = lastPayDate;
+    public void setBirthdate(LocalDate birthdate) {
+        this.birthdate = birthdate;
     }
+
+    public LocalDate getLastpaydate() {
+        return lastpaydate;
+    }
+
+    public void setLastpaydate(LocalDate lastpaydate) {
+        this.lastpaydate = lastpaydate;
+    }
+
     public boolean isActive() {
         return active;
     }
