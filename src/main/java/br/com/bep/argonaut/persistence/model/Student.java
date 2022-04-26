@@ -43,6 +43,9 @@ public class Student implements Serializable {
     @Column(name = "last_pay_date")
     private LocalDate lastPayDate;
 
+    @Column(name = "active")
+    private boolean active;
+
     public Long getId() {
         return id;
     }
@@ -129,5 +132,12 @@ public class Student implements Serializable {
 
     public void setLastPayDate(LocalDate lastPayDate) {
         this.lastPayDate = lastPayDate;
+    }
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 }
