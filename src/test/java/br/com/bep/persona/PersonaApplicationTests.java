@@ -1,10 +1,10 @@
-package br.com.bep.argonaut;
+package br.com.bep.persona;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ArgonautApplicationTests {
+class PersonaApplicationTests {
 
 	@Test
 	void contextLoads() {

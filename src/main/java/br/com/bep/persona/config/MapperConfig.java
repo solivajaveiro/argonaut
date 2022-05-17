@@ -1,4 +1,4 @@
-package br.com.bep.argonaut.config;
+package br.com.bep.persona.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

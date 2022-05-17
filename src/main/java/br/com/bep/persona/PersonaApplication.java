@@ -1,13 +1,13 @@
-package br.com.bep.argonaut;
+package br.com.bep.persona;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ArgonautApplication {
+public class PersonaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ArgonautApplication.class, args);
+		SpringApplication.run(PersonaApplication.class, args);
 	}
 
 }
