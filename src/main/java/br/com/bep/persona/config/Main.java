@@ -13,7 +13,7 @@ public class Main {
                 .replace("-", "")
                 .replace(".", "")
                 .replace("T", "");
-
+//""
         String format = dataFormatada.substring(0, 3);
 
         System.out.println(dataFormatada);
