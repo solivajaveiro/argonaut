@@ -12,6 +12,7 @@ public class Main {
                 .replace(":", "")
                 .replace("-", "")
                 .replace(".", "")
+                .replace("/", "")
                 .replace("T", "");
 //""
         String format = dataFormatada.substring(0, 3);
