@@ -8,13 +8,15 @@ import br.com.bep.persona.repository.CharacterRepository;
 
 import org.modelmapper.Conditions;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
+
+import static org.springframework.util.Assert.notNull;
+
 
 @Service
 public class CharacterService {
@@ -56,12 +58,15 @@ public class CharacterService {
     }
 
     @Transactional
-    public CharacterDTO update(String id, CharacterDTO characterDTO) {
-        Character character = characterRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Id not found"));
+    public Optional<CharacterDTO> update(String id, CharacterDTO characterDTO) {
+        notNull(id, "Id Invalido");
+        notNull(characterDTO, "Invalid request");
 
-        mapper.map(characterDTO, character);
-        character = characterRepository.save(character);
-        CharacterDTO charDTO = new CharacterDTO();
-        return mapper.map(character, CharacterDTO.class);
+         return characterRepository.findById(id).map(user -> {
+            user.setName(characterDTO.getName());
+
+            return mapper.map(characterRepository.save(user), CharacterDTO.class);
+        });
+
     }
 }

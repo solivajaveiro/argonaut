@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/character")
@@ -31,7 +32,8 @@ public class CharacterController {
 
     @PutMapping("/{id}")
     public ResponseEntity<CharacterDTO> update(@PathVariable(value = "id") String id, @RequestBody @Valid CharacterDTO characterDto) {
-        CharacterDTO dto = characterService.update(id, characterDto);
-        return ResponseEntity.status(HttpStatus.OK).body(dto);
+
+        Optional<CharacterDTO> dto = characterService.update(id, characterDto);
+        return ResponseEntity.status(HttpStatus.OK).body(dto.get());
     }
 }
